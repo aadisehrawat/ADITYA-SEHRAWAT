@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .font {
+            
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: content-box;
+            padding: 10px;
+        }
+
+        #heading2 {
+            position: absolute;
+            top: 50px;
+        }
+        
+        #subheading2{
+            position: relative;
+            bottom: 29px;
+        }
+
+        #subheading{
+            position: absolute;
+            top: 90px;
+            font-size: 14px;
+            color: grey;
+        }
+
+        .main{
+            border: 2px solid rgb(255, 255, 255);
+            width: 100%;
+            height:200px;
+            position: absolute;
+            top: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            gap:50px
+        }
+        
+        .box{
+            border: 2px solid rgb(255, 255, 255);
+            width:170px;
+            height:210px;
+            border-radius: 8%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        .heading{
+            margin-left: 49px;
+            font-size: 13px;
+        }
+        .price{
+            font-size: 20px;
+            position:relative;
+            bottom: 20px;
+            color: green;
+        }
+        #box1_2{
+            margin-left: 62px;
+        }
+        #box2_2{
+            margin-left: 56px;
+        }
+        #box3_2{
+            margin-left: 56px;
+        }
+        #box1_3{
+            margin-left: 60px;
+            font-size: 10px;
+            position: relative;
+            bottom: 24px
+        }
+        #box2_3{
+            margin-left: 60px;
+            font-size: 10px;
+            position: relative;
+            bottom: 24px
+        }
+        #box3_3{
+            margin-left: 60px;
+            font-size: 10px;
+            position: relative;
+            bottom: 24px
+        }
+        .content{
+            font-size: 13px;
+            text-align: center;
+            position: relative;
+            bottom: 22px
+        }
+        .button{
+            width:110px;
+            height:30px;
+            color: purple;
+            border: 2px solid purple;
+            position: relative;
+            left: 30px;
+            bottom: 21px;
+            border-radius: 19%;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <div id=cont>
+        <div class=font id=1heading>
+            <h1>Choose a plan that is right for
+            </h1>
+            <h1 id=heading2>your business</h1>
+        </div>
+        <div class=font id=subheading>
+            <p>We collect from our users so you can get an honest opinion of what </p>
+            <p id="subheading2">an experience with our website are really ike!</p>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="box" id="box1">
+            <strong><p class="heading" >Starter Plan</p></strong>
+            <br><span class="price" id="box1_2"><strong>Free</strong></span>
+            <br><span id="box1_3"><em>Per month</em></span>
+            <br><span class="content" ><p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p></span>
+            <button class="button">Start Now</button>
+        </div>
+        <div class="box" id="box2">
+            <strong><p class="heading" >Starter Plan</p></strong>
+            <br><span class="price" id="box2_2" style="color: yellow;"><strong>$39.00</strong></span>
+            <br><span id="box2_3"><em>Per month</em></span>
+            <br><span class="content" ><p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p></span>
+            <button class="button">Start Now</button>
+        </div>
+        <div class="box" id="box3">
+            <strong><p class="heading" >Starter Plan</p></strong>
+            <br><span class="price" id="box3_2" style="color: purple;"><strong>$59.00</strong></span>
+            <br><span id="box3_3"><em>Per month</em></span>
+            <br><span class="content" ><p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p></span>
+            <button class="button">Start Now</button>
+        </div>
+        </div>
+
+</body>
+
+</html>

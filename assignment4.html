@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Movie Grid</title>
+  <style>
+    /* --- Reset & base --- */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;background:#f7f7f7;color:#222}
+
+    .wrap{max-width:1200px;margin:24px auto;padding:12px}
+
+    /* --- Grid --- */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); /* responsive without @media */
+      gap:18px;
+    }
+
+    /* --- Card --- */
+    .card{
+      background:#fff;
+      border:1px solid #e6e6e6;
+      border-radius:4px;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      box-shadow:0 1px 0 rgba(0,0,0,0.03);
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+
+
+    .card .poster{
+      width:100%;
+      height:0;
+      padding-bottom:100%; /* square poster area; change ratio by adjusting padding-bottom */
+      position:relative;
+      background:#ddd center/cover no-repeat;
+    }
+
+    .card .poster img{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;
+    }
+
+    .card .meta{
+      padding:20px 22px 24px;
+      text-align:center;
+      margin-top:auto; 
+    }
+
+    .card h3{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size:20px;
+      margin-bottom:12px;
+      color:#111;
+      font-weight:700;
+    }
+
+    .rating{
+      font-size:14px;color:#444;margin-bottom:12px;
+    }
+
+    .btn{
+      display:inline-block;padding:8px 18px;border-radius:3px;background:#48a6da;border:1px solid rgba(0,0,0,0.05);color:#fff;text-decoration:none;font-weight:600;font-size:14px;box-shadow:0 1px 0 rgba(255,255,255,0.15) inset;transition:background .12s ease, transform .12s ease;
+    }
+
+    
+
+    /* small decorative divider */
+    .divider{height:1px;background:linear-gradient(90deg,#eee,#f6f6f6);margin:0 -1px 0}
+
+    /* subtle caption area for rating label style */
+    
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1 style="text-align:center;margin-bottom:18px;font-family:Georgia,serif">Now showing</h1>
+
+    <div class="grid">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="poster">
+          <!-- replace src with your image paths -->
+          <img src="https://imgs.search.brave.com/m0GvGQ7ttFEKDWg2G6dvLJl2xCjAGCMMdEMY_3UlYUo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzEwSGFDN3pQakwu/anBn" alt="Doctor Strange 2 poster">
+        </div>
+        <div class="meta">
+          <h3>Doctor Strange 2</h3>
+          <p class="rating"><span class="caption">Rating:-</span> 4.5</p>
+          <a class="btn" href="#">Book now</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="poster">
+          <img src="https://imgs.search.brave.com/9JVZtdJwoveqdlD1Dzg9Rl_buDjOKb_PCitEjBVtGjI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC9h/NTIxNGUyMTI4NDU4/NTcuWTNKdmNDd3hO/REF3TERFd09UVXNN/Q3c0TVRBLnBuZw" alt="Bhool Bhulaiyaa 2 poster">
+        </div>
+        <div class="meta">
+          <h3>Bhool Bhulaiyaa 2</h3>
+          <p class="rating"><span class="caption">Rating:-</span> 4.5</p>
+          <a class="btn" href="#">Book now</a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="poster">
+          <img src="https://imgs.search.brave.com/WuxGB3-0l6GjfiYgACZlcLHEbCCLp_jDdO9rK9qoh4Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/Ym9sbHl3b29kbWRi/LmNvbS9maXQtaW4v/bW92aWVzL2xhcmdl/dGh1bWIvMjAyMC9q/YXllc2hiaGFpLWpv/cmRhYXIvamF5ZXNo/YmhhaS1qb3JkYWFy/LXBvc3Rlci0yLmpw/Zw" alt="Jayeshbhai Jordaar poster">
+        </div>
+        <div class="meta">
+          <h3>Jayeshbhai Jordaar</h3>
+          <p class="rating"><span class="caption">Rating:-</span> 4.5</p>
+          <a class="btn" href="#">Book now</a>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="poster">
+          <img src="https://imgs.search.brave.com/o6delzlOk4xQYK05ODQnwhIg_lKvcDa8qLpmsNI-w6M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzJjL2M5/L2M1LzJjYzljNTlk/ODVjNTkzMTM3ODhl/YTVlNzg4NzE2NjY3/LmpwZw" alt="Jurassic World poster">
+        </div>
+        <div class="meta">
+          <h3>Jurassic World</h3>
+          <p class="rating"><span class="caption">Rating:-</span> 4.5</p>
+          <a class="btn" href="#">Book now</a>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="poster">
+          <img src="https://imgs.search.brave.com/BDeDWuY9rsFuLNkuDfz589mg1lpjxM6UnWylvHcprzw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC81/M2ViOTg5NDQwNjkx/Ny41ZTdkZmZjMWQw/ZmM2LnBuZw" alt="KGF2 poster">
+        </div>
+        <div class="meta">
+          <h3>KGF2</h3>
+          <p class="rating"><span class="caption">Rating:-</span> 4.5</p>
+          <a class="btn" href="#">Book now</a>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="poster">
+          <img src="https://imgs.search.brave.com/hjXcgTQ_6W8ecwjN2aAbqMqy_m0TJEwl1QcjwhPJsUc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzE2LzAy/LzIxLzE2MDIyMTEy/Y2VmNmRhNTgwNTNl/NzIxMzhkNmVkNzc4/LmpwZw" alt="RRR poster">
+        </div>
+        <div class="meta">
+          <h3>RRR</h3>
+          <p class="rating"><span class="caption">Rating:-</span> 4.5</p>
+          <a class="btn" href="#">Book now</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</body>
+</html>
